@@ -11,3 +11,6 @@ RUN npm install
 EXPOSE 3001
 EXPOSE 9229
 ENTRYPOINT ["npm", "start"]
+
+RUN npm install @contrast/agent
+CMD ["node", "--import", "@contrast/agent", "[application entrypoint]"]
